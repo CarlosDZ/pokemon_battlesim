@@ -1,0 +1,15 @@
+Blaze:
+Healer:
+Hydration:
+Libero:
+Regenerator:
+Water Bubble:
+Natural Cure:
+Serene Grace:
+Water Absorb:
+Cute Charm:
+Magic Guard:
+Unaware:
+Pressure:
+Unnerve:
+Mirror Armor:

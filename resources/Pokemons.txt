@@ -1,0 +1,90 @@
+
+NatID#0594
+{
+    Name:Alomomola
+    Type1:Water
+    Type2:Null
+    HP:165
+    ATK:75
+    DEF:80
+    SP.ATK:40
+    SP.DEF:45
+    SPE:65
+    NumOfAbilitys:3
+    AbilityString:Healer,Hydration,Regenerator
+}
+
+NatID#0752
+{
+    Name:Araquanid
+    Type1:Water
+    Type2:Bug
+    HP:68
+    ATK:70
+    DEF:92
+    SP.ATK:50
+    SP.DEF:132
+    SPE:42
+    NumOfAbilitys:2
+    AbilityString:Water Bubble,Water Absorb
+}
+
+NatID#0242
+{
+    Name:Blissey
+    Type1:Normal
+    Type2:Null
+    HP:255
+    ATK:10
+    DEF:10
+    SP.ATK:75
+    SP.DEF:135
+    SPE:55
+    NumOfAbilitys:3
+    AbilityString:Natural Cure,Serene Grace,Healer
+}
+
+NatID#0815
+{
+    Name:Cinderace
+    Type1:Fire
+    Type2:Null
+    HP:80
+    ATK:116
+    DEF:75
+    SP.ATK:65
+    SP.DEF:75
+    SPE:119
+    NumOfAbilitys:2
+    AbilityString:Blaze,Libero
+}
+
+NatID#0036
+{
+    Name:Clefable
+    Type1:Fairy
+    Type2:Null
+    HP:95
+    ATK:70
+    DEF:73
+    SP.ATK:95
+    SP.DEF:90
+    SPE:60
+    NumOfAbilitys:3
+    AbilityString:Cute Charm,Magic Guard,Unaware
+}
+
+NatID#0823
+{
+    Name:Corviknight
+    Type1:Flying
+    Type2:Steel
+    HP:98
+    ATK:87
+    DEF:105
+    SP.ATK:53
+    SP.DEF:85
+    SPE:67
+    NumOfAbilitys:3
+    AbilityString:Pressure,Unnerve,Mirror Armor
+}
