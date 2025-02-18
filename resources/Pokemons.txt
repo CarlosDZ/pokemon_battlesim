@@ -1,7 +1,5 @@
 
-NatID#0594
-{
-    Name:Alomomola
+NatID#0594{Name:Alomomola
     Type1:Water
     Type2:Null
     HP:165
@@ -14,9 +12,7 @@ NatID#0594
     AbilityString:Healer,Hydration,Regenerator
 }
 
-NatID#0752
-{
-    Name:Araquanid
+NatID#0752{Name:Araquanid
     Type1:Water
     Type2:Bug
     HP:68
@@ -29,9 +25,7 @@ NatID#0752
     AbilityString:Water Bubble,Water Absorb
 }
 
-NatID#0242
-{
-    Name:Blissey
+NatID#0242{Name:Blissey
     Type1:Normal
     Type2:Null
     HP:255
@@ -44,9 +38,7 @@ NatID#0242
     AbilityString:Natural Cure,Serene Grace,Healer
 }
 
-NatID#0815
-{
-    Name:Cinderace
+NatID#0815{Name:Cinderace
     Type1:Fire
     Type2:Null
     HP:80
@@ -59,9 +51,7 @@ NatID#0815
     AbilityString:Blaze,Libero
 }
 
-NatID#0036
-{
-    Name:Clefable
+NatID#0036{Name:Clefable
     Type1:Fairy
     Type2:Null
     HP:95
@@ -74,9 +64,7 @@ NatID#0036
     AbilityString:Cute Charm,Magic Guard,Unaware
 }
 
-NatID#0823
-{
-    Name:Corviknight
+NatID#0823{Name:Corviknight
     Type1:Flying
     Type2:Steel
     HP:98
