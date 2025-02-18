@@ -6,22 +6,20 @@ public class PokeReader {
 
     public int getNatID(String poke_name){
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            Pattern pattern = Pattern.compile("NatID#(\\d{4})\\s*\\{\\s*Name:"+poke_name);
+
             String line;
-            Pattern pattern = Pattern.compile("NatID#(\\d{4})\\s*\\{\\s*Name:([A-Za-z ]+)");            
             while ((line = reader.readLine()) != null) {
                 Matcher matcher = pattern.matcher(line);
                 if (matcher.find()) {
-                    int natId = Integer.parseInt(matcher.group(1));
-                    String name = matcher.group(2);
-                    if (name.equals(poke_name)) {
-                        return natId;
-                    }
+                    int natID = Integer.parseInt(matcher.group(1));
+                    return natID;
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return -1; // Si no se encuentra el pokemon.
+        return -1;
     }
     
     public int[] getBaseStats(int natID){
