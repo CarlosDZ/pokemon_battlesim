@@ -1,0 +1,69 @@
+Choice Scarf{
+    ID:1
+    DES:Holder's Speed is 1.5x, but it can only select the first move it executes.
+}
+
+Choice Specs{
+    ID:2
+    DES:Holder's Special Attack is 1.5x, but it can only select the first move it executes.
+}
+
+Choice Band{
+    ID:3
+    DES:Holder's Attack is 1.5x, but it can only select the first move it executes.
+}
+
+Leftovers{
+    ID:4
+    DES:At the end of every turn, holder restores 1/16 of its max HP.
+}
+
+1/3 HP Berry{
+    ID:5
+    DES:Restores 1/3 max HP at 1/4 max HP or less. (simplified item)
+}
+
+Assault Vest{
+    ID:6
+    DES:Holder's Special Defense is 1.5x, but it can only select damaging moves.
+}
+
+Eviolite{
+    ID:7
+    DES:If holder's species can evolve, its Defense and Special Defense are 1.5x.
+}
+
+Expert Belt{
+    ID:8
+    DES:Holder's attacks that are super effective against the target do 1.2x damage.
+}
+
+Heavy-Duty Boots{
+    ID:9
+    DES:When switching in, the holder is unaffected by hazards on its side of the field.
+}
+
+Life Orb{
+    ID:10
+    DES:Holder's attacks do 1.3x damage, and it loses 1/10 its max HP after the attack.
+}
+
+Mental Herb{
+    ID:11
+    DES:Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use.
+}
+
+Power Herb{
+    ID:12
+    DES:Holder's two-turn moves complete in one turn (except Sky Drop). Single use.
+}
+
+Rocky Helmet{
+    ID:13
+    DES:If holder is hit by a contact move, the attacker loses 1/6 of its max HP.
+}
+
+Salac Berry{
+    ID:14
+    DES:Raises holder's Speed by 1 stage when at 1/4 max HP or less. Single use.
+}

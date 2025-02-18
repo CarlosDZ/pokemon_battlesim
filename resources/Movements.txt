@@ -1,1 +1,296 @@
-AtkID
+Acrobatics{
+    ID:1
+    TYPE:Flying
+    FAMILY:PHYS
+    POWER:55
+    ACCUR:100
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
+
+Alluring Voice{
+    ID:2
+    TYPE:Fairy
+    FAMILY:SPE
+    POWER:80
+    ACCUR:100
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Aqua Jet{
+    ID:3
+    TYPE:Water
+    FAMILY:PHYS
+    POWER:40
+    ACCUR:100
+    PP:32
+    EFFECT:N
+    PRIO:1
+}
+
+Baton Pass{
+    ID:4
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:64
+    EFFECT:Y
+    PRIO:0
+}
+
+Blizzard{
+    ID:5
+    TYPE:Ice
+    FAMILY:SPE
+    POWER:110
+    ACCUR:70
+    PP:8
+    EFFECT:Y
+    PRIO:0
+}
+
+Body Slam{
+    ID:6
+    TYPE:Normal
+    FAMILY:PHYS
+    POWER:85
+    ACCUR:100
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
+
+Calm Mind{
+    ID:7
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:32
+    EFFECT:Y
+    PRIO:0
+}
+
+Facade{
+    ID:8
+    TYPE:Normal
+    FAMILY:PHYS
+    POWER:70
+    ACCUR:100
+    PP:32
+    EFFECT:Y
+    PRIO:0
+}
+
+Flip Turn{
+    ID:9
+    TYPE:Water
+    FAMILY:PHYS
+    POWER:60
+    ACCUR:100
+    PP:32
+    EFFECT:Y
+    PRIO:0
+}
+
+Healing Wish{
+    ID:10
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Hydro Pump{
+    ID:11
+    TYPE:Water
+    FAMILY:SPE
+    POWER:110
+    ACCUR:80
+    PP:8
+    EFFECT:N
+    PRIO:0
+}
+
+Ice Beam{
+    ID:12
+    TYPE:Ice
+    FAMILY:SPE
+    POWER:90
+    ACCUR:100
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Light Screen{
+    ID:13
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:48
+    EFFECT:Y
+    PRIO:0
+}
+
+Liquidation{
+    ID:14
+    TYPE:Water
+    FAMILY:PHYS
+    POWER:85
+    ACCUR:100
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Pain Split{
+    ID:15
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:32
+    EFFECT:Y
+    PRIO:0
+}
+
+Play Rough{
+    ID:16
+    TYPE:Fairy
+    FAMILY:PHYS
+    POWER:90
+    ACCUR:90
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Protect{
+    ID:17
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Psychic{
+    ID:18
+    TYPE:Psychic
+    FAMILY:SPE
+    POWER:90
+    ACCUR:100
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Rest{
+    ID:19
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:8
+    EFFECT:Y
+    PRIO:0
+}
+
+Scald{
+    ID:20
+    TYPE:Water
+    FAMILY:SPE
+    POWER:80
+    ACCUR:100
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
+
+Shadow Ball{
+    ID:21
+    TYPE:Ghost
+    FAMILY:SPE
+    POWER:80
+    ACCUR:100
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
+
+Sleep Talk{
+    ID:22
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Substitute{
+    ID:23
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Surf{
+    ID:24
+    TYPE:Water
+    FAMILY:SPE
+    POWER:90
+    ACCUR:100
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
+
+Waterfall{
+    ID:25
+    TYPE:Water
+    FAMILY:PHYS
+    POWER:80
+    ACCUR:100
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
+
+Wish{
+    ID:26
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:INF
+    PP:16
+    EFFECT:Y
+    PRIO:0
+}
+
+Zen Headbutt{
+    ID:27
+    TYPE:Psychic
+    FAMILY:PHYS
+    POWER:80
+    ACCUR:90
+    PP:24
+    EFFECT:Y
+    PRIO:0
+}
