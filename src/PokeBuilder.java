@@ -153,7 +153,7 @@ public class PokeBuilder {
 
         System.out.println("---Estos son los movimientos que tu pokemon tiene disponibles---");
         for(int i = 0; i < movePool.length; i++){
-            System.out.println(i+1+" - "+ movePoolNames[i]+"\n  "+mvRead.getDescription(movePool[i]));
+            System.out.println("\n"+(i+1)+" - "+ movePoolNames[i]+"\n  "+mvRead.getDescription(movePool[i]));
             String family = mvRead.getFamily(movePool[i]);
             System.out.println("Type: "+mvRead.getType(movePool[i])+"       Type of Attack: "+family);
             if(family.equals("PHYS")||family.equals("SPE")) System.out.print("Power: "+mvRead.getPower(movePool[i]));
