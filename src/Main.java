@@ -32,7 +32,7 @@ public class Main {
         int[] moves = read.getMovePool(nat);
 
         for (int move : moves) {
-            System.out.println(move+" "+mvRead.getName(move)+"  "+mvRead.getType(move)+"  "+mvRead.getFamily(move)+"  "+mvRead.getPower(move)+"  "+mvRead.getAccur(move)+"  "+mvRead.getPP(move));
+            System.out.println(move+" "+mvRead.getName(move)+"  "+mvRead.getType(move)+"  "+mvRead.getFamily(move)+"  "+mvRead.getPower(move)+"  "+mvRead.getAccur(move)+"  "+mvRead.getPP(move)+"  "+mvRead.hasSideEffect(move));
         }
 
     }

@@ -166,4 +166,60 @@ public class MoveReader {
         }
         return -1;
     }
+
+    public int getPrio(int moveID){
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+
+            Pattern pattern = Pattern.compile("\\s*[A-Za-z0-9 -]+\\{ID:"+moveID+"\\s*");
+            
+            String line;
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()) {
+                    Pattern prioPattern = Pattern.compile("\\s*PRIO:(\\d*)");
+                    while((line = reader.readLine()) != null){
+                        Matcher prioMatcher = prioPattern.matcher(line);
+                        if(prioMatcher.find()){
+                            int prio = Integer.parseInt(prioMatcher.group(1));
+                            return prio;
+                        }
+                    }
+                    
+                }
+            }
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public boolean hasSideEffect(int moveID){
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+
+            Pattern pattern = Pattern.compile("\\s*[A-Za-z0-9 -]+\\{ID:"+moveID+"\\s*");
+            
+            String line;
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()) {
+                    Pattern effPattern = Pattern.compile("\\s*EFFECT:([A-Z])");
+                    while((line = reader.readLine()) != null){
+                        Matcher effMatcher = effPattern.matcher(line);
+                        if(effMatcher.find()){
+                            String eff = effMatcher.group(1);
+                            boolean hasSideEffect = false;
+                            if(eff.equals("Y")) hasSideEffect = true;
+                            return hasSideEffect;
+                        }
+                    }
+                    
+                }
+            }
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
