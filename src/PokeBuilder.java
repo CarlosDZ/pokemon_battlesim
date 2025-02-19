@@ -142,6 +142,51 @@ public class PokeBuilder {
     }
 
     public String[] selectMovements(int poke_id){
-        return new String[] {"hola"};
+        PokeReader pkRead = new PokeReader();
+        MoveReader mvRead = new MoveReader();
+        Scanner sc = new Scanner(System.in);
+
+        int[] movePool = pkRead.getMovePool(poke_id);
+        String[] movePoolNames = mvRead.getMovePoolNames(movePool);
+
+        int accuracy;
+
+        System.out.println("---Estos son los movimientos que tu pokemon tiene disponibles---");
+        for(int i = 0; i < movePool.length; i++){
+            System.out.println(i+1+" - "+ movePoolNames[i]+"\n  "+mvRead.getDescription(movePool[i]));
+            String family = mvRead.getFamily(movePool[i]);
+            System.out.println("Type: "+mvRead.getType(movePool[i])+"       Type of Attack: "+family);
+            if(family.equals("PHYS")||family.equals("SPE")) System.out.print("Power: "+mvRead.getPower(movePool[i]));
+
+            accuracy = mvRead.getAccur(movePool[i]);
+            if(accuracy == 101)
+                System.out.print("      Accuracy: Cant Miss");
+
+            else
+                System.out.print("      Accuracy: "+accuracy);
+            System.out.println("      PP: "+mvRead.getPP(movePool[i]));
+            
+        }
+
+        System.out.print("\n\n");
+
+        int[] previouslySelected = {-1,-1,-1,-1};
+        int selectedMov = 1;
+        for(int i = 0; i<4;i++){
+            System.out.println("Selecciona el movimiento numero "+(i+1)+"/4   (Escribe el numero a continuacion)");
+            try {
+                do { 
+                    selectedMov = sc.nextInt();
+                    if(selectedMov<1 || selectedMov>movePool.length || selectedMov == previouslySelected[0] || selectedMov == previouslySelected[1] || selectedMov == previouslySelected[2])
+                    System.out.println("El numero introducido no es valido, prueba con otro.");
+
+                } while (selectedMov<1 || selectedMov>movePool.length || selectedMov == previouslySelected[0] || selectedMov == previouslySelected[1] || selectedMov == previouslySelected[2]);
+                previouslySelected[i] = selectedMov;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        String[] Movements = mvRead.getMovePoolNames(previouslySelected);
+        return Movements;
     }
 }

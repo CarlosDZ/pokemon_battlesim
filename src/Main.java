@@ -1,4 +1,7 @@
 
+import java.util.Arrays;
+
+
 
 
 
@@ -57,6 +60,6 @@ public class Main {
         pkBuild.buildFinalStats(read.getNatID("Cinderace"));
         */
         
-        System.out.println(mvRead.getDescription(2));
+        System.out.println(Arrays.toString(pkBuild.selectMovements(read.getNatID("Alomomola"))));
     }
 }
