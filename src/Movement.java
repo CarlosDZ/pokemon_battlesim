@@ -11,4 +11,8 @@ public class Movement {
 
     public boolean disabled;
     public boolean encored;
+
+    public Movement(String movename){
+        
+    }
 }

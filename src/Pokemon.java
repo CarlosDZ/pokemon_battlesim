@@ -60,7 +60,13 @@ public class Pokemon {
         this.item_name = pkBuild.selectItem();
         this.item_id = itRead.getID(this.item_name);
 
-        //inicializar los movimientos
+        String[] moves = pkBuild.selectMovements(poke_id);
+
+        this.Slot1 = new Movement(moves[0]);
+        this.Slot2 = new Movement(moves[1]);
+        this.Slot3 = new Movement(moves[2]);
+        this.Slot4 = new Movement(moves[3]);
+
 
     }
 
