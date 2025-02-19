@@ -3,7 +3,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
         PokeReader read = new PokeReader();
         MoveReader mvRead = new MoveReader();
+        ItemReader itRead = new ItemReader();
 
+        /*
         int nat = read.getNatID("Alomomola");
 
         System.out.println(nat);
@@ -34,6 +36,9 @@ public class Main {
         for (int move : moves) {
             System.out.println(move+" "+mvRead.getName(move)+"  "+mvRead.getType(move)+"  "+mvRead.getFamily(move)+"  "+mvRead.getPower(move)+"  "+mvRead.getAccur(move)+"  "+mvRead.getPP(move)+"  "+mvRead.hasSideEffect(move));
         }
+         */
+
+        System.out.println(itRead.getID("Choice Specs"));
 
     }
 }
