@@ -77,10 +77,32 @@ public class PokeReader {
     }
 
     public String[] getHabs(int natID){
-        //esta necesitara ejecutar getNumberOfHabs()
-        String[] habilities = {};
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            String[] habs = new String[getNumberOfHabs(natID)];
+            Pattern pattern = Pattern.compile("NatID#"+natID+"\\s*\\{\\s*Name:[A-Za-z -]+");
 
-        return habilities;
+            String line;
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()){
+                    Pattern habsPattern = Pattern.compile("\\s*AbilityString:\\s*");
+                    while(true){
+                        line = reader.readLine();
+                        Matcher habsMatcher = habsPattern.matcher(line);
+                        if(habsMatcher.find()){
+                            for(int i = 0; i < habs.length; i++){
+                                line = reader.readLine();
+                                habs[i] = line.trim();
+                            }
+                            return habs;
+                        }
+                    }
+                }
+            }
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+        return new String[]{"-1"};
     }
 
     public String[] getTypes(int natID){
