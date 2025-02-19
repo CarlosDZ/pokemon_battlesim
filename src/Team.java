@@ -1,3 +1,7 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Team {
     public int Player;
 
@@ -12,6 +16,7 @@ public class Team {
 
     public Team(int player){
         PokeReader pkRead = new PokeReader();
+        Scanner sc = new Scanner(System.in);
 
         this.Player = player;
 
@@ -24,7 +29,7 @@ public class Team {
         int[] base_stats;
         for(int i = 0; i < aviable_pokemons.length; i++){
             poke_id = pkRead.getNatID(aviable_pokemons[i]);
-            System.out.println("\n"+aviable_pokemons[i]+"  ||  "+pkRead.getTypes(poke_id)[0]+", "+pkRead.getTypes(poke_id)[1]);
+            System.out.println("\n"+(i+1)+" - "+aviable_pokemons[i]+"  ||  "+pkRead.getTypes(poke_id)[0]+", "+pkRead.getTypes(poke_id)[1]);
             System.out.print("Abilities: ");
             for(int l = 0; l < pkRead.getNumberOfHabs(poke_id); l++){
                 System.out.print(pkRead.getHabs(poke_id)[l]+"       ");
@@ -34,6 +39,32 @@ public class Team {
             System.out.println("\nHP: "+base_stats[0]+"    ATK: "+base_stats[1]+"    DEF: "+base_stats[2]+"    SP.ATK: "+base_stats[3]+"    SP.DEF: "+base_stats[4]+"    SPEED: "+base_stats[5]);
         }
 
+        System.out.println("---A continuacion, introduce el numero del pokemon que quieras seleccionar---");
+        int[] selection_codes = {0,0,0,0,0,0};
+        int selected_pokemon = 0;
+        
+        for(int i = 0; i < selection_codes.length; i++){
+            try {
+                do { 
+                    System.out.println("Elige al pokemon "+(i+1)+"/6");
+                    selected_pokemon = sc.nextInt();
+                    if(selected_pokemon<1 || selected_pokemon > aviable_pokemons.length || selected_pokemon == selection_codes[0]|| selected_pokemon == selection_codes[1]|| selected_pokemon == selection_codes[2]|| selected_pokemon == selection_codes[3]|| selected_pokemon == selection_codes[4]) 
+                        System.out.println("Numero no valido, por favor, prueba con otro. AVISO: No se permiten pokemon duplicados en el equipo.");
+                } while (selected_pokemon<1 || selected_pokemon > aviable_pokemons.length || selected_pokemon == selection_codes[0]|| selected_pokemon == selection_codes[1]|| selected_pokemon == selection_codes[2]|| selected_pokemon == selection_codes[3]|| selected_pokemon == selection_codes[4]);
+                selection_codes[i] = selected_pokemon;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        team_names[0] = aviable_pokemons[(selection_codes[0]-1)];
+        team_names[1] = aviable_pokemons[(selection_codes[1]-1)];
+        team_names[2] = aviable_pokemons[(selection_codes[2]-1)];
+        team_names[3] = aviable_pokemons[(selection_codes[3]-1)];
+        team_names[4] = aviable_pokemons[(selection_codes[4]-1)];
+        team_names[5] = aviable_pokemons[(selection_codes[5]-1)];
+
+        System.out.println(Arrays.toString(team_names));
 
 
     }

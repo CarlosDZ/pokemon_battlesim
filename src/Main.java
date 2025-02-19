@@ -60,5 +60,6 @@ public class Main {
 
         pkBuild.buildFinalStats(read.getNatID("Cinderace"));
         */
+        Team team1 = new Team(1);
     }
 }
