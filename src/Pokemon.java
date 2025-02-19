@@ -60,7 +60,7 @@ public class Pokemon {
         this.item_name = pkBuild.selectItem();
         this.item_id = itRead.getID(this.item_name);
 
-        String[] moves = pkBuild.selectMovements(poke_id);
+        int[] moves = pkBuild.selectMovements(poke_id);
 
         this.Slot1 = new Movement(moves[0]);
         this.Slot2 = new Movement(moves[1]);
