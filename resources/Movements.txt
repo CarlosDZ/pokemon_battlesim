@@ -1,5 +1,4 @@
-Acrobatics{
-    ID:1
+Acrobatics{ID:1
     TYPE:Flying
     FAMILY:PHYS
     POWER:55
@@ -9,8 +8,7 @@ Acrobatics{
     PRIO:0
 }
 
-Alluring Voice{
-    ID:2
+Alluring Voice{ID:2
     TYPE:Fairy
     FAMILY:SPE
     POWER:80
@@ -20,8 +18,7 @@ Alluring Voice{
     PRIO:0
 }
 
-Aqua Jet{
-    ID:3
+Aqua Jet{ID:3
     TYPE:Water
     FAMILY:PHYS
     POWER:40
@@ -31,8 +28,7 @@ Aqua Jet{
     PRIO:1
 }
 
-Baton Pass{
-    ID:4
+Baton Pass{ID:4
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
@@ -42,8 +38,7 @@ Baton Pass{
     PRIO:0
 }
 
-Blizzard{
-    ID:5
+Blizzard{ID:5
     TYPE:Ice
     FAMILY:SPE
     POWER:110
@@ -53,8 +48,7 @@ Blizzard{
     PRIO:0
 }
 
-Body Slam{
-    ID:6
+Body Slam{ID:6
     TYPE:Normal
     FAMILY:PHYS
     POWER:85
@@ -64,8 +58,7 @@ Body Slam{
     PRIO:0
 }
 
-Calm Mind{
-    ID:7
+Calm Mind{ID:7
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
@@ -75,8 +68,7 @@ Calm Mind{
     PRIO:0
 }
 
-Facade{
-    ID:8
+Facade{ID:8
     TYPE:Normal
     FAMILY:PHYS
     POWER:70
@@ -86,8 +78,7 @@ Facade{
     PRIO:0
 }
 
-Flip Turn{
-    ID:9
+Flip Turn{ID:9
     TYPE:Water
     FAMILY:PHYS
     POWER:60
@@ -97,8 +88,7 @@ Flip Turn{
     PRIO:0
 }
 
-Healing Wish{
-    ID:10
+Healing Wish{ID:10
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
@@ -108,8 +98,7 @@ Healing Wish{
     PRIO:0
 }
 
-Hydro Pump{
-    ID:11
+Hydro Pump{ID:11
     TYPE:Water
     FAMILY:SPE
     POWER:110
@@ -119,8 +108,7 @@ Hydro Pump{
     PRIO:0
 }
 
-Ice Beam{
-    ID:12
+Ice Beam{ID:12
     TYPE:Ice
     FAMILY:SPE
     POWER:90
@@ -130,8 +118,7 @@ Ice Beam{
     PRIO:0
 }
 
-Light Screen{
-    ID:13
+Light Screen{ID:13
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
@@ -141,8 +128,7 @@ Light Screen{
     PRIO:0
 }
 
-Liquidation{
-    ID:14
+Liquidation{ID:14
     TYPE:Water
     FAMILY:PHYS
     POWER:85
@@ -152,8 +138,7 @@ Liquidation{
     PRIO:0
 }
 
-Pain Split{
-    ID:15
+Pain Split{ID:15
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
@@ -163,8 +148,7 @@ Pain Split{
     PRIO:0
 }
 
-Play Rough{
-    ID:16
+Play Rough{ID:16
     TYPE:Fairy
     FAMILY:PHYS
     POWER:90
@@ -174,8 +158,7 @@ Play Rough{
     PRIO:0
 }
 
-Protect{
-    ID:17
+Protect{ID:17
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
@@ -185,8 +168,7 @@ Protect{
     PRIO:0
 }
 
-Psychic{
-    ID:18
+Psychic{ID:18
     TYPE:Psychic
     FAMILY:SPE
     POWER:90
@@ -196,8 +178,7 @@ Psychic{
     PRIO:0
 }
 
-Rest{
-    ID:19
+Rest{ID:19
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
@@ -207,8 +188,7 @@ Rest{
     PRIO:0
 }
 
-Scald{
-    ID:20
+Scald{ID:20
     TYPE:Water
     FAMILY:SPE
     POWER:80
@@ -218,8 +198,7 @@ Scald{
     PRIO:0
 }
 
-Shadow Ball{
-    ID:21
+Shadow Ball{ID:21
     TYPE:Ghost
     FAMILY:SPE
     POWER:80
@@ -229,8 +208,7 @@ Shadow Ball{
     PRIO:0
 }
 
-Sleep Talk{
-    ID:22
+Sleep Talk{ID:22
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
@@ -240,8 +218,7 @@ Sleep Talk{
     PRIO:0
 }
 
-Substitute{
-    ID:23
+Substitute{ID:23
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
@@ -251,8 +228,7 @@ Substitute{
     PRIO:0
 }
 
-Surf{
-    ID:24
+Surf{ID:24
     TYPE:Water
     FAMILY:SPE
     POWER:90
@@ -262,8 +238,7 @@ Surf{
     PRIO:0
 }
 
-Waterfall{
-    ID:25
+Waterfall{ID:25
     TYPE:Water
     FAMILY:PHYS
     POWER:80
@@ -273,8 +248,7 @@ Waterfall{
     PRIO:0
 }
 
-Wish{
-    ID:26
+Wish{ID:26
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
@@ -284,8 +258,7 @@ Wish{
     PRIO:0
 }
 
-Zen Headbutt{
-    ID:27
+Zen Headbutt{ID:27
     TYPE:Psychic
     FAMILY:PHYS
     POWER:80
