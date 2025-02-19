@@ -1,5 +1,4 @@
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Team {
@@ -64,7 +63,12 @@ public class Team {
         team_names[4] = aviable_pokemons[(selection_codes[4]-1)];
         team_names[5] = aviable_pokemons[(selection_codes[5]-1)];
 
-        System.out.println(Arrays.toString(team_names));
+        this.Pokemon1 = new Pokemon(team_names[0]);
+        this.Pokemon2 = new Pokemon(team_names[1]);
+        this.Pokemon3 = new Pokemon(team_names[2]);
+        this.Pokemon4 = new Pokemon(team_names[3]);
+        this.Pokemon5 = new Pokemon(team_names[4]);
+        this.Pokemon6 = new Pokemon(team_names[5]);
 
 
     }

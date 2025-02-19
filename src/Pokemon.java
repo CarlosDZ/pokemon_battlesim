@@ -51,6 +51,8 @@ public class Pokemon {
         this.name = name;
         this.id = pkRead.getNatID(name);
 
+        System.out.println("Ahora vamos a personalizar a tu "+ name);
+
         int[] stats = pkBuild.buildFinalStats(id);
 
         this.HP = this.cur_HP = stats[0];

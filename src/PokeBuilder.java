@@ -60,12 +60,12 @@ public class PokeBuilder {
                 e.printStackTrace();
             }
             int evs_to_assign = 0;
-            System.out.println("Cuantos EV le quieres asignar? (Maximo por estadistica: 252) (Restante: "+remaining_ev+")\n\n---Escribe el numero de EV---");
+            System.out.println("Cuantos EV le quieres asignar? (Maximo por estadistica: 252) (En la estadistica actual: "+EVs[chosen_stat-1]+" (Restante: "+remaining_ev+")\n\n---Escribe el numero de EV---");
             try {
                 do { 
                     evs_to_assign = sc.nextInt();
-                    if(evs_to_assign<1||evs_to_assign>252||evs_to_assign>remaining_ev) System.out.println("Cantidad no valida, pruba con otra");
-                } while (evs_to_assign<1||evs_to_assign>252||evs_to_assign>remaining_ev);
+                    if(evs_to_assign<0||evs_to_assign+EVs[chosen_stat-1]>252||evs_to_assign>remaining_ev) System.out.println("Cantidad no valida, pruba con otra");
+                } while (evs_to_assign<0||evs_to_assign+EVs[chosen_stat-1]>252||evs_to_assign>remaining_ev);
             } catch (Exception e) {
                 e.printStackTrace();
             }
