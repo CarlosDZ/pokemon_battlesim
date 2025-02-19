@@ -57,6 +57,6 @@ public class Main {
         pkBuild.buildFinalStats(read.getNatID("Cinderace"));
         */
         
-        
+        System.out.println(pkBuild.selectItem());
     }
 }

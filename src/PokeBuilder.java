@@ -119,6 +119,26 @@ public class PokeBuilder {
     public String selectItem(){
         ItemReader itRead = new ItemReader();
         String[] itemList = itRead.listItems();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Estos son los objetos disponibles:");
+        for(int i = 0; i < itemList.length; i++){
+            System.out.println(i+1+" - "+itemList[i]+":\n       "+itRead.getDescription(itRead.getID(itemList[i])));
+        }
+
+        int selectedItem = 1;
+        System.out.println("\n\n---Escribe el numero del objeto que quieres equipar a tu pokemon---");
+        try {
+            do { 
+                if(selectedItem < 1 || selectedItem > itemList.length) System.out.println("Este numero no es valido. Prueba con otro");
+                selectedItem = sc.nextInt();
+            } while (selectedItem < 1 || selectedItem > itemList.length);
+            String equipedItem = itemList[selectedItem-1];
+            return equipedItem;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "-1";
     }
         
 }
