@@ -3,6 +3,7 @@
 public class Pokemon {
     public String name;
     public int id;
+    public int lvl;
 
     public int HP;
     public int ATK;
@@ -50,6 +51,7 @@ public class Pokemon {
 
         this.name = name;
         this.id = pkRead.getNatID(name);
+        this.lvl = PokeBuilder.pokemon_lvl;
 
         System.out.println("Ahora vamos a personalizar a tu "+ name);
 

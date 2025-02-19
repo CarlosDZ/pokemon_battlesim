@@ -18,7 +18,10 @@ public class Main {
         AbilityReader abRead = new AbilityReader();
         PokeBuilder pkBuild = new PokeBuilder();
         Scanner sc = new Scanner(System.in);
+        Events event = new Events();
 
+
+        /* 
         System.out.println("----Bienvenido al simulador de combates pokemon (Formato OU)----\n En este, dos jugadores distintos crean sus equipos para luego tener un combate entre ellos.");
 
         System.out.println("Empecemos por el jugador 1, como te llamas?");
@@ -34,6 +37,14 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+            */
+
+            Pokemon alomomola = new Pokemon("Alomomola");
+            Movement surf = new Movement(24);
+            Pokemon alomomola2 = new Pokemon("Alomomola");
+
+        int damage = event.calcDamage(alomomola, surf, alomomola2);
+        System.out.println(damage);
 
     }
 }

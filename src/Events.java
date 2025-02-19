@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Events {
 
     //Tabla de tipos
@@ -65,33 +67,95 @@ public class Events {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public int calcDamage(Pokemon attacker, Movement used, Pokemon defender){   //use this only on phys and spe attacks, not effects
+
+        Random random = new Random();
         float multiplier = 1;
+        int variation = random.nextInt(16) + 85; //    [85-100]
 
         switch (used.type) {
             case "Steel":
-            //    multiplier = multiplier * (1+buscarTipos(defender, tiposBuscados))
-                
+                multiplier = multiplier * (1+buscarTipos(defender, DEBIL_CONTRA_STEEL)-buscarTipos(defender, RESISTE_STEEL));
+                break;  
+            case "Flying":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_FLYING)-buscarTipos(defender, RESISTE_FLYING)));
                 break;
-            default:
-                throw new AssertionError();
+            case "Water":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_WATER)-buscarTipos(defender, RESISTE_WATER)));
+                break;
+            case "Ice":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_ICE)-buscarTipos(defender, RESISTE_ICE)));
+                break;
+            case "Grass":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_GRASS)-buscarTipos(defender, RESISTE_GRASS)));
+                break;
+            case "Bug":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_BUG)-buscarTipos(defender, RESISTE_BUG)));
+                break;
+            case "Electric":
+                if(buscarTipos(defender, INMUNE_A_ELECTRIC) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_ELECTRIC)-buscarTipos(defender, RESISTE_ELECTRIC)));
+                break;
+            case "Normal":
+                if(buscarTipos(defender, INMUNE_A_NORMAL) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, -buscarTipos(defender, RESISTE_NORMAL));
+                break;
+            case "Rock":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_ROCK)-buscarTipos(defender, RESISTE_ROCK)));
+                break;
+            case "Ground":
+                if(buscarTipos(defender, INMUNE_A_GROUND) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_GROUND)-buscarTipos(defender, RESISTE_GROUND)));  
+                break;
+            case "Fire":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_FIRE)-buscarTipos(defender, RESISTE_FIRE)));
+                break;
+            case "Fighting":
+                if(buscarTipos(defender, INMUNE_A_FIGHTING) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_FIGHTING)-buscarTipos(defender, RESISTE_FIGHTING)));  
+                break;
+            case "Fairy":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_FAIRY)-buscarTipos(defender, RESISTE_FAIRY)));
+                break;
+            case "Psychic":
+                if(buscarTipos(defender, INMUNE_A_PSYCHIC) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_PSYCHIC)-buscarTipos(defender, RESISTE_PSYCHIC)));  
+                break;
+            case "Poison":
+                if(buscarTipos(defender, INMUNE_A_POISON) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_POISON)-buscarTipos(defender, RESISTE_POISON)));
+                break;
+            case "Dragon":
+                if(buscarTipos(defender, INMUNE_A_DRAGON) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_DRAGON)-buscarTipos(defender, RESISTE_DRAGON)));
+                break;
+            case "Ghost":
+                if(buscarTipos(defender, INMUNE_A_GHOST) == 1) multiplier = 0;
+                else multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_GHOST)-buscarTipos(defender, RESISTE_GHOST)));  
+                break;
+            case "Dark":
+                multiplier = multiplier * (float)Math.pow(2, (buscarTipos(defender, DEBIL_CONTRA_DARK)-buscarTipos(defender, RESISTE_DARK)));
+                break;
         }
 
-        return 5;
+        int attackingstat;
+        int defendingstat;
+        if(used.family.equals("PHYS")){
+            attackingstat = attacker.cur_ATK;
+            defendingstat = defender.cur_DEF;
+        }
+        else{
+            attackingstat = attacker.cur_SPATK;
+            defendingstat = defender.cur_SPDEF;
+        }
+
+        float stab = 1;
+        String[] type = {used.type};
+        if(buscarTipos(attacker, type) >0) stab = (float) 1.5;
+
+        int damage = (int)(0.01 * stab * multiplier * variation * (((0.2*attacker.lvl+1)*attackingstat*used.power)/(25*defendingstat)+2));
+
+        return damage;
 
     }
 
