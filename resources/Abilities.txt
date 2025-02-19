@@ -1,0 +1,74 @@
+Blaze{ID:1
+    DES: This description isnt made yet.
+}
+
+Healer{ID:2
+    DES: This description isnt made yet.
+
+}
+
+Hydration{ID:3
+    DES: This description isnt made yet.
+
+}
+
+Libero{ID:4
+    DES: This description isnt made yet.
+
+}
+
+Regenerator{ID:5
+    DES: This description isnt made yet.
+
+}
+
+Water Bubble{ID:6
+    DES: This description isnt made yet.
+
+}
+
+Natural Cure{ID:7
+    DES: This description isnt made yet.
+
+}
+
+Serene Grace{ID:8
+    DES: This description isnt made yet.
+
+}
+
+Water Absorb{ID:9
+    DES: This description isnt made yet.
+
+}
+
+Cute Charm{ID:10
+    DES: This description isnt made yet.
+
+}
+
+Magic Guard{ID:11
+    DES: This description isnt made yet.
+
+}
+
+Unaware{ID:12
+    DES: This description isnt made yet.
+
+}
+
+Pressure{ID:13
+    DES: This description isnt made yet.
+
+}
+
+Unnerve{ID:14
+    DES: This description isnt made yet.
+
+}
+
+Mirror Armor{ID:15
+    DES: This description isnt made yet.
+
+}
+

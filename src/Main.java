@@ -1,9 +1,12 @@
 
+
+
 public class Main {
     public static void main(String[] args) throws Exception {
         PokeReader read = new PokeReader();
         MoveReader mvRead = new MoveReader();
         ItemReader itRead = new ItemReader();
+        AbilityReader abRead = new AbilityReader();
 
         /*
         int nat = read.getNatID("Alomomola");
@@ -36,11 +39,16 @@ public class Main {
         for (int move : moves) {
             System.out.println(move+" "+mvRead.getName(move)+"  "+mvRead.getType(move)+"  "+mvRead.getFamily(move)+"  "+mvRead.getPower(move)+"  "+mvRead.getAccur(move)+"  "+mvRead.getPP(move)+"  "+mvRead.hasSideEffect(move));
         }
-         */
+        
 
         int itemid = itRead.getID("1/3 HP Berry");
 
         System.out.println(itRead.getDescription(itemid));
+        */
+
+        int abilityID = abRead.getID("Libero");
+        System.out.println(abilityID);
+        System.out.println(abRead.getDescription(abilityID));
 
     }
 }
