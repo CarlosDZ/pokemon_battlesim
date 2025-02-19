@@ -1,61 +1,60 @@
-Blaze{
-    ID:1
-}
-
-Healer{
-    ID:2
+Blaze{ID:1
 
 }
 
-Hydration{
-    ID:3
+Healer{ID:2
+
 }
 
-Libero{
-    ID:4
+Hydration{ID:3
+
 }
 
-Regenerator{
-    ID:5
+Libero{ID:4
+
 }
 
-Water Bubble{
-    ID:6
+Regenerator{ID:5
+
 }
 
-Natural Cure{
-    ID:7
+Water Bubble{ID:6
+
 }
 
-Serene Grace{
-    ID:8
+Natural Cure{ID:7
+
 }
 
-Water Absorb{
-    ID:9
+Serene Grace{ID:8
+
 }
 
-Cute Charm{
-    ID:10
+Water Absorb{ID:9
+
 }
 
-Magic Guard{
-    ID:11
+Cute Charm{ID:10
+
 }
 
-Unaware{
-    ID:12
+Magic Guard{ID:11
+
 }
 
-Pressure{
-    ID:13
+Unaware{ID:12
+
 }
 
-Unnerve{
-    ID:14
+Pressure{ID:13
+
 }
 
-Mirror Armor{
-    ID:15
+Unnerve{ID:14
+
+}
+
+Mirror Armor{ID:15
+
 }
 
