@@ -48,10 +48,32 @@ public class PokeReader {
         }
         return new int[]{-1};
     }
-    public int getNumberOfHabs(int natID){
-        int stats = 0;
 
-        return stats;
+    public int getNumberOfHabs(int natID){
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            Pattern pattern = Pattern.compile("NatID#"+natID+"\\s*\\{\\s*Name:[A-Za-z -]+");
+
+            String line;
+            int numberOfHabs = 0;
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()){
+                    Pattern habsnumpattern = Pattern.compile("\\s*NumOfAbilitys:(\\d+)\\s*");
+
+                    while(numberOfHabs == 0){
+                        line = reader.readLine();
+                        Matcher habsnumMatcher = habsnumpattern.matcher(line);
+                        if(habsnumMatcher.find()){
+                            numberOfHabs = Integer.parseInt(habsnumMatcher.group(1));
+                        }
+                    }
+                    return numberOfHabs;
+                }
+            }
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+        return -1;
     }
 
     public String[] getHabs(int natID){

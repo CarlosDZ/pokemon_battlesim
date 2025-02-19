@@ -12,5 +12,8 @@ public class Main {
         for(int i=0;i < stats.length; i++){
             System.out.println(stats[i]);
         }
+
+        int numberOfHabs = read.getNumberOfHabs(nat);
+        System.out.println(numberOfHabs);
     }
 }
