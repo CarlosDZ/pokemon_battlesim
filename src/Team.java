@@ -10,6 +10,8 @@ public class Team {
 
     public boolean hasLost = false;
 
-    
+    public Team(int player){
+        
+    }
 
 }
