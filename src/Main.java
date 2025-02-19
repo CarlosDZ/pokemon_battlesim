@@ -38,7 +38,9 @@ public class Main {
         }
          */
 
-        System.out.println(itRead.getID("Choice Specs"));
+        int itemid = itRead.getID("1/3 HP Berry");
+
+        System.out.println(itRead.getDescription(itemid));
 
     }
 }
