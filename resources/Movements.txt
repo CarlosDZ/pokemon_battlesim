@@ -32,7 +32,7 @@ Baton Pass{ID:4
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:64
     EFFECT:Y
     PRIO:0
@@ -62,7 +62,7 @@ Calm Mind{ID:7
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:32
     EFFECT:Y
     PRIO:0
@@ -92,7 +92,7 @@ Healing Wish{ID:10
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:16
     EFFECT:Y
     PRIO:0
@@ -122,7 +122,7 @@ Light Screen{ID:13
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:48
     EFFECT:Y
     PRIO:0
@@ -142,7 +142,7 @@ Pain Split{ID:15
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:32
     EFFECT:Y
     PRIO:0
@@ -162,7 +162,7 @@ Protect{ID:17
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:16
     EFFECT:Y
     PRIO:0
@@ -182,7 +182,7 @@ Rest{ID:19
     TYPE:Psychic
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:8
     EFFECT:Y
     PRIO:0
@@ -212,7 +212,7 @@ Sleep Talk{ID:22
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:16
     EFFECT:Y
     PRIO:0
@@ -222,7 +222,7 @@ Substitute{ID:23
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:16
     EFFECT:Y
     PRIO:0
@@ -252,7 +252,7 @@ Wish{ID:26
     TYPE:Normal
     FAMILY:EFFECT
     POWER:0
-    ACCUR:INF
+    ACCUR:101
     PP:16
     EFFECT:Y
     PRIO:0
