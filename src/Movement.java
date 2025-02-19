@@ -13,6 +13,9 @@ public class Movement {
     public boolean encored;
 
     public Movement(String movename){
-        
+        MoveReader mvRead = new MoveReader();
+
+        this.name = movename;
+        this.id = mvRead.get
     }
 }

@@ -141,7 +141,7 @@ public class PokeBuilder {
         return "-1";
     }
 
-    public String[] selectMovements(int poke_id){
+    public int[] selectMovements(int poke_id){
         PokeReader pkRead = new PokeReader();
         MoveReader mvRead = new MoveReader();
         Scanner sc = new Scanner(System.in);
@@ -186,7 +186,6 @@ public class PokeBuilder {
                 e.printStackTrace();
             }
         }
-        String[] Movements = mvRead.getMovePoolNames(previouslySelected);
-        return Movements;
+        return previouslySelected;
     }
 }

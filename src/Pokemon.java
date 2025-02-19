@@ -66,8 +66,6 @@ public class Pokemon {
         this.Slot2 = new Movement(moves[1]);
         this.Slot3 = new Movement(moves[2]);
         this.Slot4 = new Movement(moves[3]);
-
-
     }
 
 }
