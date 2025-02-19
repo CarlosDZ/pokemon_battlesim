@@ -140,5 +140,8 @@ public class PokeBuilder {
         }
         return "-1";
     }
+
+    Public String[] selectMovements(int poke_id){
         
+    }
 }

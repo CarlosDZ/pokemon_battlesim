@@ -6,6 +6,7 @@ Acrobatics{ID:1
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Alluring Voice{ID:2
@@ -16,6 +17,8 @@ Alluring Voice{ID:2
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
+
 }
 
 Aqua Jet{ID:3
@@ -26,6 +29,7 @@ Aqua Jet{ID:3
     PP:32
     EFFECT:N
     PRIO:1
+    DES:This movement description inst implemented yet
 }
 
 Baton Pass{ID:4
@@ -36,6 +40,7 @@ Baton Pass{ID:4
     PP:64
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Blizzard{ID:5
@@ -46,6 +51,7 @@ Blizzard{ID:5
     PP:8
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Body Slam{ID:6
@@ -56,6 +62,7 @@ Body Slam{ID:6
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Calm Mind{ID:7
@@ -66,6 +73,7 @@ Calm Mind{ID:7
     PP:32
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Facade{ID:8
@@ -76,6 +84,7 @@ Facade{ID:8
     PP:32
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Flip Turn{ID:9
@@ -86,6 +95,7 @@ Flip Turn{ID:9
     PP:32
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Healing Wish{ID:10
@@ -96,6 +106,7 @@ Healing Wish{ID:10
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Hydro Pump{ID:11
@@ -106,6 +117,7 @@ Hydro Pump{ID:11
     PP:8
     EFFECT:N
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Ice Beam{ID:12
@@ -116,6 +128,7 @@ Ice Beam{ID:12
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Light Screen{ID:13
@@ -126,6 +139,7 @@ Light Screen{ID:13
     PP:48
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Liquidation{ID:14
@@ -136,6 +150,7 @@ Liquidation{ID:14
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Pain Split{ID:15
@@ -146,6 +161,7 @@ Pain Split{ID:15
     PP:32
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Play Rough{ID:16
@@ -156,6 +172,7 @@ Play Rough{ID:16
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Protect{ID:17
@@ -166,6 +183,7 @@ Protect{ID:17
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Psychic{ID:18
@@ -176,6 +194,7 @@ Psychic{ID:18
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Rest{ID:19
@@ -186,6 +205,7 @@ Rest{ID:19
     PP:8
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Scald{ID:20
@@ -196,6 +216,7 @@ Scald{ID:20
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Shadow Ball{ID:21
@@ -206,6 +227,7 @@ Shadow Ball{ID:21
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Sleep Talk{ID:22
@@ -216,6 +238,7 @@ Sleep Talk{ID:22
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Substitute{ID:23
@@ -226,6 +249,7 @@ Substitute{ID:23
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Surf{ID:24
@@ -236,6 +260,7 @@ Surf{ID:24
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Waterfall{ID:25
@@ -246,6 +271,7 @@ Waterfall{ID:25
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Wish{ID:26
@@ -256,6 +282,7 @@ Wish{ID:26
     PP:16
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
 
 Zen Headbutt{ID:27
@@ -266,4 +293,5 @@ Zen Headbutt{ID:27
     PP:24
     EFFECT:Y
     PRIO:0
+    DES:This movement description inst implemented yet
 }
