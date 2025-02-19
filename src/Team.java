@@ -11,7 +11,21 @@ public class Team {
     public boolean hasLost = false;
 
     public Team(int player){
-        
+        PokeReader pkRead = new PokeReader();
+
+        this.Player = player;
+
+        int[] team_ids = new int[6];
+        int[] aviable_pokemons = pkRead.pokemon_list();
+
+        System.out.println("---Estos son los pokemons disponibles para tu equipo---");
+
+        for(int i = 0; i < aviable_pokemons.length; i++){
+            System.out.println(pkRead.);
+        }
+
+
+
     }
 
 }

@@ -178,9 +178,9 @@ public class PokeReader {
         return new int[]{-1};
     }
 
-    public int[] pokemon_list(){
+    public String[] pokemon_list(){
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
-            Pattern pattern = Pattern.compile("NatID#(\\d*)\\{Name:.*");
+            Pattern pattern = Pattern.compile("NatID#\\d*\\{Name:(.*)");
             int itemsCounter = 0;
 
             String line;
@@ -190,25 +190,25 @@ public class PokeReader {
                     itemsCounter++;
                 }
             }
-            int[] NatIDs_list = new int[itemsCounter];
+            String[] pokemon_names_list = new String[itemsCounter];
             itemsCounter = 0;
 
             try (BufferedReader reader2 = new BufferedReader(new FileReader(FILE_PATH))){
                 while((line = reader2.readLine()) != null){
                     Matcher matcher = pattern.matcher(line);
                     if(matcher.find()){
-                        NatIDs_list[itemsCounter] = Integer.parseInt(matcher.group(1));
+                        pokemon_names_list[itemsCounter] = matcher.group(1);
                         itemsCounter++;
                     }
                 }
-                return NatIDs_list;
+                return pokemon_names_list;
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } catch(IOException e){
         e.printStackTrace();
         }
-        return new int[] {-1};
+        return new String[] {"-1"};
     }
 }
 
