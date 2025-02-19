@@ -133,8 +133,49 @@ public class PokeReader {
     }
 
     public int[] getMovePool(int natID){
-        int[] movePool = {};
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            Pattern pattern = Pattern.compile("NatID#"+natID+"\\s*\\{\\s*Name:[A-Za-z -]+");
 
-        return movePool;
+            int numOfMoves = 0;
+            String line;
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()){
+                    Pattern movepoolPattern = Pattern.compile("\\s*MovePool:(\\d+,)*\\s*");
+                    while(true){
+                        line = reader.readLine();
+                        Matcher movepoolMatcher = movepoolPattern.matcher(line);
+                        if(movepoolMatcher.find()){
+                            for (char c : line.toCharArray()){
+                                if(c == ',') numOfMoves++;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            String moveConstrucion = "\\s*MovePool:";
+            String moveConstructionAdd = "(\\d+),";
+
+            for(int i = 0; i < numOfMoves; i++){
+                moveConstrucion = moveConstrucion + moveConstructionAdd;
+            }
+            moveConstrucion = moveConstrucion +"\\s*";
+            int[] moves = new int[numOfMoves];
+
+            Pattern movesPattern = Pattern.compile(moveConstrucion);
+            Matcher movesMatcher = movesPattern.matcher(line);
+            if(movesMatcher.find()){
+                for(int i = 0; i < moves.length; i++){
+                    moves[i] = Integer.parseInt(movesMatcher.group(i+1));
+                }
+            }
+            return moves;
+    } catch(IOException e){
+            e.printStackTrace();
+    }
+        return new int[]{-1};
     }
 }
+
