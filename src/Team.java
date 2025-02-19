@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Team {
     public int Player;
+    public String name;
 
     public Pokemon Pokemon1;
     public Pokemon Pokemon2;
@@ -13,15 +14,16 @@ public class Team {
 
     public boolean hasLost = false;
 
-    public Team(int player){
+    public Team(int player,String name){
         PokeReader pkRead = new PokeReader();
         Scanner sc = new Scanner(System.in);
-
+        this.name = name;
         this.Player = player;
 
         String[] team_names = new String[6];
         String[] aviable_pokemons = pkRead.pokemon_list();
 
+        System.out.println("Muy bien "+name+", empecemos por crear tu equipo Pokemon");
         System.out.println("---Estos son los pokemons disponibles para tu equipo---");
 
         int poke_id;
