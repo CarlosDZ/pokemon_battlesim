@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         PokeReader read = new PokeReader();
 
-        int nat = read.getNatID("Cinderace");
+        int nat = read.getNatID("Araquanid");
 
         System.out.println(nat);
 
@@ -20,6 +20,12 @@ public class Main {
 
         for (String hab : habs) {
             System.out.println(hab);
+        }
+
+        String[] types = read.getTypes(nat);
+
+        for (String type : types) {
+            System.out.println(type);
         }
     }
 }

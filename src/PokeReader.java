@@ -106,10 +106,30 @@ public class PokeReader {
     }
 
     public String[] getTypes(int natID){
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            Pattern pattern = Pattern.compile("NatID#"+natID+"\\s*\\{\\s*Name:[A-Za-z -]+");
 
-        String[] types = {};
+            String line;
+            String[] types = new String[2];
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()){
+                    Pattern typePattern = Pattern.compile("\\s*[A-Za-z ]+\\d{1}:([A-Za-z]+)\\s*");
 
-        return types;
+                    for(int i = 0; i < 2; i++){
+                        line = reader.readLine();
+                        Matcher typeMatcher = typePattern.matcher(line);
+                        if(typeMatcher.find()){
+                            types[i] = typeMatcher.group(1);
+                        }
+                    }
+                    return types;
+                }
+            }
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+        return new String[]{"-1"};
     }
 
     public int[] getMovePool(int natID){
