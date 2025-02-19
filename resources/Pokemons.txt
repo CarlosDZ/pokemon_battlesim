@@ -9,7 +9,10 @@ NatID#594{Name:Alomomola
     SP.DEF:45
     SPE:65
     NumOfAbilitys:3
-    AbilityString:Healer,Hydration,Regenerator
+    AbilityString:
+        Healer
+        Hydration
+        Regenerator
 }
 
 NatID#752{Name:Araquanid
@@ -22,7 +25,9 @@ NatID#752{Name:Araquanid
     SP.DEF:132
     SPE:42
     NumOfAbilitys:2
-    AbilityString:Water Bubble,Water Absorb
+    AbilityString:
+        Water Bubble
+        Water Absorb
 }
 
 NatID#242{Name:Blissey
@@ -35,7 +40,10 @@ NatID#242{Name:Blissey
     SP.DEF:135
     SPE:55
     NumOfAbilitys:3
-    AbilityString:Natural Cure,Serene Grace,Healer
+    AbilityString:
+        Natural Cure
+        Serene Grace
+        Healer
 }
 
 NatID#815{Name:Cinderace
@@ -48,7 +56,9 @@ NatID#815{Name:Cinderace
     SP.DEF:75
     SPE:119
     NumOfAbilitys:2
-    AbilityString:Blaze,Libero
+    AbilityString:
+        Blaze
+        Libero
 }
 
 NatID#36{Name:Clefable
@@ -61,7 +71,10 @@ NatID#36{Name:Clefable
     SP.DEF:90
     SPE:60
     NumOfAbilitys:3
-    AbilityString:Cute Charm,Magic Guard,Unaware
+    AbilityString:
+        Cute Charm
+        Magic Guard
+        Unaware
 }
 
 NatID#823{Name:Corviknight
@@ -74,5 +87,8 @@ NatID#823{Name:Corviknight
     SP.DEF:85
     SPE:67
     NumOfAbilitys:3
-    AbilityString:Pressure,Unnerve,Mirror Armor
+    AbilityString:
+        Pressure
+        Unnerve
+        Mirror Armor
 }
