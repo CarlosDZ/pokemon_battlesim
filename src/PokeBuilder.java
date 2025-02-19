@@ -141,7 +141,7 @@ public class PokeBuilder {
         return "-1";
     }
 
-    Public String[] selectMovements(int poke_id){
-        
+    public String[] selectMovements(int poke_id){
+        return new String[] {"hola"};
     }
 }

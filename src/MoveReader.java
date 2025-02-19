@@ -222,4 +222,31 @@ public class MoveReader {
         }
         return false;
     }
+
+    public String getDescription(int moveID){
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+
+            Pattern pattern = Pattern.compile("\\s*[A-Za-z0-9 -]+\\{ID:"+moveID+"\\s*");
+            
+            String line;
+            while((line = reader.readLine()) != null){
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()) {
+                    Pattern desPattern = Pattern.compile("\\s*DES:(.*)");
+                    while((line = reader.readLine()) != null){
+                        Matcher desMatcher = desPattern.matcher(line);
+                        if(desMatcher.find()){
+                            String des = desMatcher.group(1);
+                            return des;
+                        }
+                    }
+                    
+                }
+            }
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return "-1";
+    }
 }
