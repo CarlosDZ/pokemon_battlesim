@@ -1,3 +1,5 @@
+
+
 public class Pokemon {
     public String name;
     public int id;
@@ -40,12 +42,16 @@ public class Pokemon {
     public boolean confused = false;
     public boolean flinched = false;
 
-    public Pokemon(int poke_id){
+    public Pokemon(String name){
         PokeBuilder pkBuild = new PokeBuilder();
         AbilityReader abRead = new AbilityReader();
         ItemReader itRead = new ItemReader();
+        PokeReader pkRead = new  PokeReader();
 
-        int[] stats = pkBuild.buildFinalStats(poke_id);
+        this.name = name;
+        this.id = pkRead.getNatID(name);
+
+        int[] stats = pkBuild.buildFinalStats(id);
 
         this.HP = this.cur_HP = stats[0];
         this.ATK = this.cur_ATK = stats[1];
@@ -54,13 +60,13 @@ public class Pokemon {
         this.SPDEF = this.cur_SPDEF = stats[4];
         this.SPEED = this.cur_SPEED = stats[5];
 
-        this.ability_name = pkBuild.selectAbility(poke_id);
+        this.ability_name = pkBuild.selectAbility(id);
         this.ability_id = abRead.getID(this.ability_name);
 
         this.item_name = pkBuild.selectItem();
         this.item_id = itRead.getID(this.item_name);
 
-        int[] moves = pkBuild.selectMovements(poke_id);
+        int[] moves = pkBuild.selectMovements(id);
 
         this.Slot1 = new Movement(moves[0]);
         this.Slot2 = new Movement(moves[1]);

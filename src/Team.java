@@ -15,13 +15,23 @@ public class Team {
 
         this.Player = player;
 
-        int[] team_ids = new int[6];
-        int[] aviable_pokemons = pkRead.pokemon_list();
+        String[] team_names = new String[6];
+        String[] aviable_pokemons = pkRead.pokemon_list();
 
         System.out.println("---Estos son los pokemons disponibles para tu equipo---");
 
+        int poke_id;
+        int[] base_stats;
         for(int i = 0; i < aviable_pokemons.length; i++){
-            System.out.println(pkRead.);
+            poke_id = pkRead.getNatID(aviable_pokemons[i]);
+            System.out.println("\n"+aviable_pokemons[i]+"  ||  "+pkRead.getTypes(poke_id)[0]+", "+pkRead.getTypes(poke_id)[1]);
+            System.out.print("Abilities: ");
+            for(int l = 0; l < pkRead.getNumberOfHabs(poke_id); l++){
+                System.out.print(pkRead.getHabs(poke_id)[l]+"       ");
+            }
+            base_stats = pkRead.getBaseStats(poke_id);
+
+            System.out.println("\nHP: "+base_stats[0]+"    ATK: "+base_stats[1]+"    DEF: "+base_stats[2]+"    SP.ATK: "+base_stats[3]+"    SP.DEF: "+base_stats[4]+"    SPEED: "+base_stats[5]);
         }
 
 
