@@ -2,6 +2,7 @@
 public class Main {
     public static void main(String[] args) throws Exception {
         PokeReader read = new PokeReader();
+        MoveReader mvRead = new MoveReader();
 
         int nat = read.getNatID("Alomomola");
 
@@ -31,7 +32,8 @@ public class Main {
         int[] moves = read.getMovePool(nat);
 
         for (int move : moves) {
-            System.out.println(move);
+            System.out.println(move+" "+mvRead.getName(move)+"  "+mvRead.getType(move));
         }
+
     }
 }
