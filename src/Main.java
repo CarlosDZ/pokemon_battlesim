@@ -7,6 +7,7 @@ public class Main {
         MoveReader mvRead = new MoveReader();
         ItemReader itRead = new ItemReader();
         AbilityReader abRead = new AbilityReader();
+        PokeBuilder pkBuild = new PokeBuilder();
 
         /*
         int nat = read.getNatID("Alomomola");
@@ -45,10 +46,12 @@ public class Main {
 
         System.out.println(itRead.getDescription(itemid));
         */
-
+        /*
         int abilityID = abRead.getID("Libero");
         System.out.println(abilityID);
         System.out.println(abRead.getDescription(abilityID));
+         */
 
+        pkBuild.buildFinalStats(read.getNatID("Cinderace"));
     }
 }
