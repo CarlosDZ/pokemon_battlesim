@@ -46,4 +46,38 @@ public class ItemReader {
         return "-1";
     }
 
+    public String[] listItems(){
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            Pattern pattern = Pattern.compile("(.+)\\{ID:\\d*");
+            int itemsCounter = 0;
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find()) {
+                    itemsCounter++;
+                }
+            }
+            String[] itemList = new String[itemsCounter];
+            itemsCounter = 0;
+
+            try (BufferedReader reader2 = new BufferedReader(new FileReader(FILE_PATH))) {
+    
+                while ((line = reader2.readLine()) != null) {
+                    Matcher matcher = pattern.matcher(line);
+                    if(matcher.find()) {
+                        itemList[itemsCounter] = matcher.group(1);
+                        itemsCounter++;
+                    }
+                }    
+                return itemList;
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+        return new String[] {"-1"};
+    }
+
 }

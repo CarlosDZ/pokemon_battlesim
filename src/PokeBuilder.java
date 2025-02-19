@@ -88,4 +88,37 @@ public class PokeBuilder {
 
         return finalStats;
     }
+
+    public String selectAbility(int poke_id){
+        PokeReader pkRead = new PokeReader();
+        AbilityReader abRead = new AbilityReader();
+        Scanner sc = new Scanner(System.in);
+
+        int numOfHabs = pkRead.getNumberOfHabs(poke_id);
+        String[] aviableAbilities = pkRead.getHabs(poke_id);
+
+        System.out.println("---Estas son las habilidades disponibles para tu pokemon---");
+        for(int i = 0; i < numOfHabs; i++){
+            System.out.println(i+1+" - "+aviableAbilities[i]+":\n       "+abRead.getDescription(abRead.getID(aviableAbilities[i])));
+        }
+
+        System.err.println("---Que habilidad quieres elegit? (Escribe el numero)---");
+        int abilitySelector;
+        try {
+            do { 
+                abilitySelector = sc.nextInt();
+            } while (abilitySelector<1 || abilitySelector>numOfHabs);
+            String finalAbility = aviableAbilities[abilitySelector-1];
+            return finalAbility;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "-1";
+    }
+
+    public String selectItem(){
+        ItemReader itRead = new ItemReader();
+        String[] itemList = itRead.listItems();
+    }
+        
 }

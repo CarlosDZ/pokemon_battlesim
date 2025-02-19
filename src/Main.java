@@ -1,6 +1,8 @@
 
 
 
+
+
 public class Main {
     public static void main(String[] args) throws Exception {
         PokeReader read = new PokeReader();
@@ -50,8 +52,11 @@ public class Main {
         int abilityID = abRead.getID("Libero");
         System.out.println(abilityID);
         System.out.println(abRead.getDescription(abilityID));
-         */
+         
 
         pkBuild.buildFinalStats(read.getNatID("Cinderace"));
+        */
+        
+        
     }
 }
