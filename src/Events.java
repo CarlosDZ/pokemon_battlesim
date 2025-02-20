@@ -161,7 +161,7 @@ public class Events {
 
     public void hitDamage(int damage, int activeTeam){
         if(activeTeam == 1){
-            System.out.println(Battlezone.act_Pokemon1+" ha atacado a "+Battlezone.act_Pokemon2+" con "+Battlezone.selected_mov1+" !");
+            System.out.println(Battlezone.act_Pokemon1.name+" ha atacado a "+Battlezone.act_Pokemon2.name+" con "+Battlezone.selected_mov1.name+" !");
             if(damage == 0) System.out.println("Pero el movimeinto no le afecto!");
             else if(damage < Battlezone.act_Pokemon2.cur_HP){
                 Battlezone.act_Pokemon2.cur_HP = Battlezone.act_Pokemon2.cur_HP - damage;
@@ -174,7 +174,7 @@ public class Events {
             }
         }
         else{
-            System.out.println(Battlezone.act_Pokemon2+" ha atacado a "+Battlezone.act_Pokemon1+" con "+Battlezone.selected_mov2+" !");
+            System.out.println(Battlezone.act_Pokemon2.name+" ha atacado a "+Battlezone.act_Pokemon1.name+" con "+Battlezone.selected_mov2.name+" !");
             if(damage == 0) System.out.println("Pero el movimeinto no le afecto!");
             else if(damage < Battlezone.act_Pokemon1.cur_HP){
                 Battlezone.act_Pokemon1.cur_HP = Battlezone.act_Pokemon1.cur_HP - damage;

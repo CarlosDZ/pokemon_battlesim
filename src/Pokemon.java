@@ -85,9 +85,9 @@ public class Pokemon {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("---Que ataque quieres utilizar?---\n1 - "+Slot1.name+"    "+Slot1.cur_PP+"/"+Slot1.PP+"    "+Slot1.type);
-        System.out.println("-2 - "+Slot2.name+"    "+Slot2.cur_PP+"/"+Slot1.PP+"    "+Slot2.type);
-        System.out.println("3 - "+Slot3.name+"    "+Slot3.cur_PP+"/"+Slot1.PP+"    "+Slot3.type);
-        System.out.println("4 - "+Slot4.name+"    "+Slot4.cur_PP+"/"+Slot1.PP+"    "+Slot4.type);
+        System.out.println("2 - "+Slot2.name+"    "+Slot2.cur_PP+"/"+Slot2.PP+"    "+Slot2.type);
+        System.out.println("3 - "+Slot3.name+"    "+Slot3.cur_PP+"/"+Slot3.PP+"    "+Slot3.type);
+        System.out.println("4 - "+Slot4.name+"    "+Slot4.cur_PP+"/"+Slot4.PP+"    "+Slot4.type);
         try {
             int movSelection = 0;
             Movement selectedSlot = Slot1;

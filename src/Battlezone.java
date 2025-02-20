@@ -21,23 +21,28 @@ public class Battlezone {
     }
 
     public void mainPlayableLoop(){
-        this.turn++; int [] accioneSinOrdenar = startOfTurn();
-        int[] ordenacciones = orderActions(accioneSinOrdenar);
+        int [] accioneSinOrdenar;
+        int [] ordenacciones;
 
-        if(ordenacciones[0] == 1){
-            resolveUseractions(team1, accioneSinOrdenar[0]);
-            resolveUseractions(team2, accioneSinOrdenar[1]);
-        }
-        else{
-            resolveUseractions(team2, accioneSinOrdenar[1]);
-            resolveUseractions(team1, accioneSinOrdenar[0]);
-        }
+        do{
+            this.turn++; accioneSinOrdenar = startOfTurn();
+            ordenacciones = orderActions(accioneSinOrdenar);
 
-        
+            if(ordenacciones[0] == 1){
+                resolveUseractions(team1, accioneSinOrdenar[0]);
+                resolveUseractions(team2, accioneSinOrdenar[1]);
+            }
+            else{
+                resolveUseractions(team2, accioneSinOrdenar[1]);
+                resolveUseractions(team1, accioneSinOrdenar[0]);
+            }
+
+            checksAfterCombat();
+        }while(team1.hasLost == false && team2.hasLost == false);
     }
 
     public int[] startOfTurn(){
-        System.out.println("Comienza el turno "+this.turn+" !");
+        System.out.println("Comienza el turno "+this.turn+" !\nEl "+act_Pokemon1.name+" de "+team1.name+" esta a "+act_Pokemon1.cur_HP+"/"+act_Pokemon1.HP+" HP\nEl "+act_Pokemon2.name+" de "+team2.name+" esta a "+act_Pokemon2.cur_HP+"/"+act_Pokemon2.HP+" HP");
         int[] tiposAcciones = {0,0};
 
         System.out.println("Primero el jugador 1, "+team1.name+".");
@@ -80,40 +85,46 @@ public class Battlezone {
         switch (action) {
             case 1-> {
                 if(player == team1){
-                    System.out.println(act_Pokemon1.name+" uso "+selected_mov1.name+" !");
-                    switch (selected_mov1.family) {
-                        case "EFFECT" -> {
-                            if(selected_mov1.doesItHit()){
-                                selected_mov1.getSpecialEffect(act_Pokemon1, selected_mov1, act_Pokemon2);
+                    if(this.act_Pokemon1.KOed) System.out.println("El movimiento no se ha podido realizar por que "+this.act_Pokemon1.name+" esta KO");
+                    else{
+                        System.out.println(act_Pokemon1.name+" uso "+selected_mov1.name+" !");
+                        switch (selected_mov1.family) {
+                            case "EFFECT" -> {
+                                if(selected_mov1.doesItHit()){
+                                    selected_mov1.getSpecialEffect(act_Pokemon1, selected_mov1, act_Pokemon2);
+                                }
+                                else System.out.println("El movimiento ha fallado!");
                             }
-                            else System.out.println("El movimiento ha fallado!");
-                        }
                             
-                        default -> {
-                            if(selected_mov1.doesItHit()){
-                                selected_mov1.getSpecialEffect(act_Pokemon1, selected_mov1, act_Pokemon2);
-                                events.hitDamage(events.calcDamage(act_Pokemon1, selected_mov1, act_Pokemon2), 1);
+                            default -> {
+                                if(selected_mov1.doesItHit()){
+                                    selected_mov1.getSpecialEffect(act_Pokemon1, selected_mov1, act_Pokemon2);
+                                    events.hitDamage(events.calcDamage(act_Pokemon1, selected_mov1, act_Pokemon2), 1);
+                                }
+                                else System.out.println("El movimiento ha fallado!");
                             }
-                            else System.out.println("El movimiento ha fallado!");
                         }
                     }
                 }
                 else {
-                    System.out.println(act_Pokemon2.name+" uso "+selected_mov2.name+" !");
-                    switch (selected_mov2.family) {
-                        case "EFFECT" -> {
-                            if(selected_mov2.doesItHit()){
-                                selected_mov2.getSpecialEffect(act_Pokemon2, selected_mov2, act_Pokemon1);
+                    if(this.act_Pokemon2.KOed) System.out.println("El movimiento no se ha podido realizar por que "+this.act_Pokemon2.name+" esta KO");
+                    else{
+                        System.out.println(act_Pokemon2.name+" uso "+selected_mov2.name+" !");
+                        switch (selected_mov2.family) {
+                            case "EFFECT" -> {
+                                if(selected_mov2.doesItHit()){
+                                    selected_mov2.getSpecialEffect(act_Pokemon2, selected_mov2, act_Pokemon1);
+                                }
+                                else System.out.println("El movimiento ha fallado!");
                             }
-                            else System.out.println("El movimiento ha fallado!");
-                        }
                             
-                        default -> {
-                            if(selected_mov2.doesItHit()){
-                                selected_mov2.getSpecialEffect(act_Pokemon2, selected_mov2, act_Pokemon1);
-                                events.hitDamage(events.calcDamage(act_Pokemon2, selected_mov2, act_Pokemon1), 2);
+                            default -> {
+                                if(selected_mov2.doesItHit()){
+                                    selected_mov2.getSpecialEffect(act_Pokemon2, selected_mov2, act_Pokemon1);
+                                    events.hitDamage(events.calcDamage(act_Pokemon2, selected_mov2, act_Pokemon1), 2);
+                                }
+                                else System.out.println("El movimiento ha fallado!");
                             }
-                            else System.out.println("El movimiento ha fallado!");
                         }
                     }
                 }
@@ -126,14 +137,18 @@ public class Battlezone {
             }
         }
     }
-}
+    
+    public void checksAfterCombat(){
+        if(this.team1.Pokemon1.KOed && this.team1.Pokemon2.KOed && this.team1.Pokemon3.KOed && this.team1.Pokemon4.KOed && this.team1.Pokemon5.KOed && this.team1.Pokemon6.KOed) this.team1.hasLost = true;
+        if(this.team2.Pokemon1.KOed && this.team2.Pokemon2.KOed && this.team2.Pokemon3.KOed && this.team2.Pokemon4.KOed && this.team2.Pokemon5.KOed && this.team2.Pokemon6.KOed) this.team2.hasLost = true;
 
-/*
- * El turno se divide en:
- * Entering
- * Before Hitting
- * Onhit
- * After Hitting
- * EndOfTurn
- * 
- */
+        if(this.act_Pokemon1.KOed && this.team1.hasLost == false){
+            System.out.println(this.team1.name+", tu pokemon ha sido debilitado, asi que te toca elegir otro.");
+            team1.switchOut();
+        }
+        if(this.act_Pokemon2.KOed && this.team2.hasLost == false){
+            System.out.println(this.team2.name+", tu pokemon ha sido debilitado, asi que te toca elegir otro.");
+            team2.switchOut();
+        }
+    }
+}

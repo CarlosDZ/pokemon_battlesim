@@ -36,7 +36,18 @@ public class Main {
         team1.listTeam();
         team2.listTeam();
 
+        System.out.println("Y, finalmente, que de comienzo el combate!");
+        Battlezone battle = new Battlezone(team1, team2);
         
+        battle.mainPlayableLoop();
 
+        if(team1.hasLost && team2.hasLost) System.out.println("Vaya, que inesperado, parece que tenemos un empate!");
+        else{
+            System.out.print("Parece que tenemos un ganador, en concreto ");
+            if(team1.hasLost) System.out.println(team2.name);
+            else System.out.println(team1.name);
+        }
+
+        System.out.println("Espero que os haya gustado el simulador de batallas Pokemon. Muchas gracias por jugar! - Carlos");
     }
 }

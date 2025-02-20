@@ -103,8 +103,8 @@ public class Team {
             do { 
                 selectedOption= sc.nextInt();
                 if(selectedOption<1 || selectedOption>6) System.out.println("Numero no valido, por favor introduce un numero entre 1 y 6");
-                else if (team[selectedOption-1] == active) System.out.println("No puedes cambiar a un pokemon que ya esta activo");
                 else if (team[selectedOption-1].KOed) System.out.println("No pudes cambiar a un pokemon que esta KO");
+                else if (team[selectedOption-1] == active) System.out.println("No puedes cambiar a un pokemon que ya esta activo");
             } while (selectedOption<1 || selectedOption>6 || team[selectedOption-1] == active || team[selectedOption-1].KOed);
 
             System.out.println(active.name+" ha vuelto a su pokeball.");
