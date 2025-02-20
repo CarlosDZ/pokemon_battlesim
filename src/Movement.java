@@ -10,6 +10,7 @@ public class Movement {
     public int accuracy;
     public int PP;
     public boolean specialEffect;
+    public int prio;
 
     public int cur_PP;
 
@@ -27,6 +28,7 @@ public class Movement {
         this.accuracy = mvRead.getAccur(move_id);
         this.PP = this.cur_PP = mvRead.getPP(move_id);
         this.specialEffect = mvRead.hasSideEffect(move_id);
+        this.prio = mvRead.getPrio(move_id);
     }
 
     public boolean doesItHit(){

@@ -81,7 +81,7 @@ public class Pokemon {
         this.Slot4 = new Movement(moves[3]);
     }
 
-    public void selectAttack(){
+    public Movement selectAttack(){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("---Que ataque quieres utilizar?---\n1 - "+Slot1.name+"    "+Slot1.cur_PP+"/"+Slot1.PP+"    "+Slot1.type);
@@ -110,12 +110,11 @@ public class Pokemon {
             } while (movSelection<1 || movSelection>4 || hasPP == false);
 
             selectedSlot.cur_PP = selectedSlot.cur_PP - 1;
-            //funcion que pone el movimiento en la funcion de cola con su prioridad y la velocidad de su usuario
-
+            return selectedSlot;
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        return Slot1;
     }
     
 

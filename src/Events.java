@@ -159,6 +159,35 @@ public class Events {
 
     }
 
+    public void hitDamage(int damage, int activeTeam){
+        if(activeTeam == 1){
+            System.out.println(Battlezone.act_Pokemon1+" ha atacado a "+Battlezone.act_Pokemon2+" con "+Battlezone.selected_mov1+" !");
+            if(damage == 0) System.out.println("Pero el movimeinto no le afecto!");
+            else if(damage < Battlezone.act_Pokemon2.cur_HP){
+                Battlezone.act_Pokemon2.cur_HP = Battlezone.act_Pokemon2.cur_HP - damage;
+                System.out.println("Ahora "+Battlezone.act_Pokemon2.name+" esta a "+Battlezone.act_Pokemon2.cur_HP+" HP!");
+            }
+            else{
+                Battlezone.act_Pokemon2.cur_HP = 0;
+                Battlezone.act_Pokemon2.KOed = true;
+                System.out.println("El ataque le ha hecho un KO al "+Battlezone.act_Pokemon2.name+" rival!!");
+            }
+        }
+        else{
+            System.out.println(Battlezone.act_Pokemon2+" ha atacado a "+Battlezone.act_Pokemon1+" con "+Battlezone.selected_mov2+" !");
+            if(damage == 0) System.out.println("Pero el movimeinto no le afecto!");
+            else if(damage < Battlezone.act_Pokemon1.cur_HP){
+                Battlezone.act_Pokemon1.cur_HP = Battlezone.act_Pokemon1.cur_HP - damage;
+                System.out.println("Ahora "+Battlezone.act_Pokemon1.name+" esta a "+Battlezone.act_Pokemon1.cur_HP+" HP!");
+            }
+            else{
+                Battlezone.act_Pokemon1.cur_HP = 0;
+                Battlezone.act_Pokemon1.KOed = true;
+                System.out.println("El ataque le ha hecho un KO al "+Battlezone.act_Pokemon1.name+" rival!!");
+            }
+        }
+    }
+
     public int buscarTipos(Pokemon pokemon, String[] tiposBuscados){
         PokeReader pkRead = new PokeReader();
 

@@ -81,7 +81,7 @@ public class Team {
         Pokemon[] team = {Pokemon1,Pokemon2,Pokemon3,Pokemon4,Pokemon5,Pokemon6};
 
         for(int i = 0; i < team.length; i++){
-            if(Pokemon[i].KOed == false) alivePokemons = alivePokemons+1;
+            if(team[i].KOed == false) alivePokemons = alivePokemons+1;
         }
 
         return alivePokemons>=2;
@@ -118,7 +118,7 @@ public class Team {
         }
     }
 
-    public void selectTurnAction(){
+    public int selectTurnAction(){
     Pokemon onBattle;
         if(this.Player == 1) onBattle = Battlezone.act_Pokemon1;
         else onBattle = Battlezone.act_Pokemon2;
@@ -138,20 +138,11 @@ public class Team {
                 else if(actionSelected == 2 && canSwitch == false) System.out.println("No te quedan pokemons a los que cambiar, selecciona otra opcion");
             } while (actionSelected<1 || actionSelected>3 || (actionSelected == 1 && canAttack == false) || (actionSelected == 2 && canSwitch == false));
 
-            switch (actionSelected) {
-                case 1-> {
-
-                }
-                case 2-> {
-
-                }
-                case 3-> {
-
-                }
-            }
+            return actionSelected;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return -1;
     }
 
     public void listTeam(){

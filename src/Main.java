@@ -36,5 +36,7 @@ public class Main {
         team1.listTeam();
         team2.listTeam();
 
+        
+
     }
 }
