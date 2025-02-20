@@ -46,7 +46,7 @@ NatID#242{Name:Blissey
         Natural Cure
         Serene Grace
         Healer
-    MovePool:2,4,5,6,7,10,14,15,17,20,22,26,27,28,29,30,31,40,41,
+    MovePool:2,4,5,6,7,10,14,15,17,20,22,26,27,28,29,30,31,40,41,48,
 }
 
 NatID#815{Name:Cinderace

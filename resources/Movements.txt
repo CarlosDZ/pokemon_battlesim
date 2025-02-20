@@ -340,17 +340,6 @@ Soft-Boiled{ID:31
     DES:This movement description inst implemented yet
 }
 
-Seismic Toss{ID:31
-    TYPE:Fighting
-    FAMILY:PHYS
-    POWER:0
-    ACCUR:100
-    PP:32
-    EFFECT:Y
-    PRIO:0
-    DES:This movement description inst implemented yet
-}
-
 Agility{ID:32
     TYPE:Normal
     FAMILY:EFFECT
@@ -522,6 +511,17 @@ Hurricane{ID:47
     POWER:110
     ACCUR:70
     PP:16
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Seismic Toss{ID:48
+    TYPE:Fighting
+    FAMILY:PHYS
+    POWER:0
+    ACCUR:100
+    PP:32
     EFFECT:Y
     PRIO:0
     DES:This movement description inst implemented yet

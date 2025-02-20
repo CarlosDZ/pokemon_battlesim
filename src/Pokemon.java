@@ -38,7 +38,7 @@ public class Pokemon {
     public boolean poisoned = false;
     public boolean badly_poisoned = false;
     public boolean sleeping = false;
-    public boolean paralized = false;
+    public boolean paralyzed = false;
     public boolean burned = false;
     public boolean frozen = false;
     public boolean KOed = false;
