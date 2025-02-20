@@ -1,0 +1,76 @@
+Baton Pass{ID:x
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:64
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Healing Wish{ID:x
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:16
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Light Screen{ID:13
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:48
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Rest{ID:x
+    TYPE:Psychic
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:8
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Sleep Talk{ID:x
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:16
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Substitute{ID:x
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:16
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}
+
+Wish{ID:x
+    TYPE:Normal
+    FAMILY:EFFECT
+    POWER:0
+    ACCUR:101
+    PP:16
+    EFFECT:Y
+    PRIO:0
+    DES:This movement description inst implemented yet
+}

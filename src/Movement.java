@@ -6,6 +6,7 @@ public class Movement {
     public int power;
     public int accuracy;
     public int PP;
+    public boolean specialEffect;
 
     public int cur_PP;
 
@@ -22,5 +23,16 @@ public class Movement {
         this.power = mvRead.getPower(move_id);
         this.accuracy = mvRead.getAccur(move_id);
         this.PP = this.cur_PP = mvRead.getPP(move_id);
+        this.specialEffect = mvRead.hasSideEffect(move_id);
+    }
+
+    public void getSpecialEffect(Movement movement) {
+        if(movement.specialEffect){
+            switch (movement.id) {
+                case 1-> {
+                }
+                default -> throw new AssertionError();
+            }
+        }
     }
 }

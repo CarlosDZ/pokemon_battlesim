@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 
 public class Pokemon {
     public String name;
@@ -76,6 +79,43 @@ public class Pokemon {
         this.Slot2 = new Movement(moves[1]);
         this.Slot3 = new Movement(moves[2]);
         this.Slot4 = new Movement(moves[3]);
+    }
+
+    public void selectAttack(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("---Que ataque quieres utilizar?---\n1 - "+Slot1.name+"    "+Slot1.cur_PP+"/"+Slot1.PP+"    "+Slot1.type);
+        System.out.println("-2 - "+Slot2.name+"    "+Slot2.cur_PP+"/"+Slot1.PP+"    "+Slot2.type);
+        System.out.println("3 - "+Slot3.name+"    "+Slot3.cur_PP+"/"+Slot1.PP+"    "+Slot3.type);
+        System.out.println("4 - "+Slot4.name+"    "+Slot4.cur_PP+"/"+Slot1.PP+"    "+Slot4.type);
+        try {
+            int movSelection = 0;
+            Movement selectedSlot = Slot1;
+            boolean hasPP;
+            do { 
+                movSelection = sc.nextInt();
+                if(movSelection >0 && movSelection<5){
+                    switch (movSelection) {
+                        case 1 -> selectedSlot = Slot1;
+                        case 2 -> selectedSlot = Slot2;
+                        case 3 -> selectedSlot = Slot3;
+                        case 4 -> selectedSlot = Slot4;
+                    }
+                    if(selectedSlot.cur_PP>0) hasPP = true;
+                    else hasPP = false;
+                }
+                else hasPP = true;
+                if(movSelection<1 || movSelection>4) System.out.println("El numero introducido no es valido, ha de ser un numero del 1 al 4");
+                else if(hasPP == false) System.out.println("Al movimiento seleccionado no le quedan PP, por favor, selecciona otro");
+            } while (movSelection<1 || movSelection>4 || hasPP == false);
+
+            selectedSlot.cur_PP = selectedSlot.cur_PP - 1;
+            //funcion que pone el movimiento en la funcion de cola con su prioridad y la velocidad de su usuario
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

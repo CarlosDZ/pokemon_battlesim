@@ -38,13 +38,7 @@ public class Main {
             e.printStackTrace();
         }
             */
-
-            Pokemon alomomola = new Pokemon("Alomomola");
-            Movement surf = new Movement(24);
-            Pokemon alomomola2 = new Pokemon("Alomomola");
-
-        int damage = event.calcDamage(alomomola, surf, alomomola2);
-        System.out.println(damage);
+        
 
     }
 }

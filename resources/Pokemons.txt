@@ -13,7 +13,7 @@ NatID#594{Name:Alomomola
         Healer
         Hydration
         Regenerator
-    MovePool:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,
+    MovePool:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,
 }
 
 NatID#752{Name:Araquanid
@@ -29,6 +29,7 @@ NatID#752{Name:Araquanid
     AbilityString:
         Water Bubble
         Water Absorb
+    MovePool:4,5,7,9,10,11,14,18,19,21,22,23,24,25,26,
 }
 
 NatID#242{Name:Blissey
@@ -45,6 +46,7 @@ NatID#242{Name:Blissey
         Natural Cure
         Serene Grace
         Healer
+    MovePool:2,4,5,6,7,10,14,15,17,20,22,26,27,28,29,30,31,40,41,
 }
 
 NatID#815{Name:Cinderace
@@ -60,6 +62,7 @@ NatID#815{Name:Cinderace
     AbilityString:
         Blaze
         Libero
+    MovePool:1,7,14,17,20,26,29,30,32,33,34,35,36,37,38,39,45,
 }
 
 NatID#36{Name:Clefable
@@ -76,6 +79,7 @@ NatID#36{Name:Clefable
         Cute Charm
         Magic Guard
         Unaware
+    MovePool:2,4,5,6,7,10,13,14,15,17,20,22,27,29,30,40,41,42,43,
 }
 
 NatID#823{Name:Corviknight
@@ -92,4 +96,5 @@ NatID#823{Name:Corviknight
         Pressure
         Unnerve
         Mirror Armor
+    MovePool:5,7,14,32,36,38,44,45,46,47
 }
