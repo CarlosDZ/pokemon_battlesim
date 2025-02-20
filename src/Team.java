@@ -75,4 +75,93 @@ public class Team {
 
     }
 
+    public boolean canSwitchOut(){
+        int alivePokemons = 0;
+
+        Pokemon[] team = {Pokemon1,Pokemon2,Pokemon3,Pokemon4,Pokemon5,Pokemon6};
+
+        for(int i = 0; i < team.length; i++){
+            if(Pokemon[i].KOed == false) alivePokemons = alivePokemons+1;
+        }
+
+        return alivePokemons>=2;
+    }
+
+    public void switchOut(){
+        Pokemon active;
+        if(this.Player == 1) active = Battlezone.act_Pokemon1;
+        else active = Battlezone.act_Pokemon2;
+        Scanner sc = new Scanner(System.in);
+        Pokemon[] team = {Pokemon1,Pokemon2,Pokemon3,Pokemon4,Pokemon5,Pokemon6};
+        System.out.println("---A que pokemon quieres cambiar? (Escribe el numero)---");
+
+        for(int i = 0; i < team.length; i++){
+            System.out.println((i+1)+" - "+team[i].name+"       "+team[i].cur_HP+"/"+team[i].HP);
+        }
+        try {
+            int selectedOption = 1;
+            do { 
+                selectedOption= sc.nextInt();
+                if(selectedOption<1 || selectedOption>6) System.out.println("Numero no valido, por favor introduce un numero entre 1 y 6");
+                else if (team[selectedOption-1] == active) System.out.println("No puedes cambiar a un pokemon que ya esta activo");
+                else if (team[selectedOption-1].KOed) System.out.println("No pudes cambiar a un pokemon que esta KO");
+            } while (selectedOption<1 || selectedOption>6 || team[selectedOption-1] == active || team[selectedOption-1].KOed);
+
+            System.out.println(active.name+" ha vuelto a su pokeball.");
+            active = team[selectedOption-1];
+            System.out.println(active.name+" ha salido al campo de batalla!");
+
+            if(this.Player == 1)  Battlezone.act_Pokemon1 = active;
+            else Battlezone.act_Pokemon2 = active;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void selectTurnAction(){
+    Pokemon onBattle;
+        if(this.Player == 1) onBattle = Battlezone.act_Pokemon1;
+        else onBattle = Battlezone.act_Pokemon2;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("---Que quieres hacer? (Escribe el numero)---\n1 - Atacar\n2 - Cambiar de pokemon\n3 - Rendirme");
+        int actionSelected;
+        boolean canAttack;
+        boolean canSwitch;
+        try {
+            do {
+                canAttack = (onBattle.Slot1.cur_PP>0 ||onBattle.Slot2.cur_PP>0 ||onBattle.Slot3.cur_PP>0 ||onBattle.Slot4.cur_PP>0);
+                canSwitch = canSwitchOut();
+                actionSelected = sc.nextInt();
+                if(actionSelected<1 || actionSelected>3) System.out.println("Numero no valido, por favor, introduce un numero entre 1 y 3");
+                else if(actionSelected == 1 && canAttack == false) System.out.println("A tu pokemon no le quedan PP en sus movimientos, selecciona otra opcion");
+                else if(actionSelected == 2 && canSwitch == false) System.out.println("No te quedan pokemons a los que cambiar, selecciona otra opcion");
+            } while (actionSelected<1 || actionSelected>3 || (actionSelected == 1 && canAttack == false) || (actionSelected == 2 && canSwitch == false));
+
+            switch (actionSelected) {
+                case 1-> {
+
+                }
+                case 2-> {
+
+                }
+                case 3-> {
+
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void listTeam(){
+        System.out.println("\nEquipo de "+this.name+":\n");
+        PokeReader pkRead = new PokeReader();
+        Pokemon[] team = {Pokemon1,Pokemon2,Pokemon3,Pokemon4,Pokemon5,Pokemon6};
+        for(int i = 0; i < 6; i++){
+            System.out.println((i+1)+" - "+team[i].name+"  #"+team[i].id+"  --"+team[i].ability_name+"--  "+"      "+pkRead.getTypes(team[i].id)[0]+"  "+pkRead.getTypes(team[i].id)[1]);
+            System.out.println("    - "+team[i].Slot1.name+"\n    - "+team[i].Slot2.name+"\n    - "+team[i].Slot3.name+"\n    - "+team[i].Slot4.name);
+        }
+        System.out.println("\n");
+    }
 }

@@ -1,10 +1,10 @@
 public class Battlezone {
 
-    Team team1;
-    Pokemon act_Pokemon1;
+    static Team team1;
+    static Pokemon act_Pokemon1;
 
-    Team team2;
-    Pokemon act_Pokemon2;
+    static Team team2;
+    static Pokemon act_Pokemon2;
 
     public Battlezone(Team team1, Team team2){
         this.team1 = team1;

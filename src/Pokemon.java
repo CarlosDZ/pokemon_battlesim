@@ -117,9 +117,6 @@ public class Pokemon {
         }
 
     }
-
-    public void switchOut(Team allyTeam){
-        
-    }
+    
 
 }

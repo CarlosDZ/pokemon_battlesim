@@ -21,24 +21,20 @@ public class Main {
         Events event = new Events();
 
 
-        /* 
+        
         System.out.println("----Bienvenido al simulador de combates pokemon (Formato OU)----\n En este, dos jugadores distintos crean sus equipos para luego tener un combate entre ellos.");
 
         System.out.println("Empecemos por el jugador 1, como te llamas?");
-        try {
-            Team team1 = new Team(1, sc.nextLine());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Team team1 = new Team(1, sc.nextLine());
+        
 
         System.out.println("Y ahora el jugador 2, cual es tu nombre?");
-        try {
-            Team team2 = new Team(2, sc.nextLine());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-            */
+        Team team2 = new Team(2, sc.nextLine());
         
+        
+        System.out.println("Ahora que estan creados los equipos, vamos a listarlos brevemente.");
+        team1.listTeam();
+        team2.listTeam();
 
     }
 }
