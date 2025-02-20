@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 public class Movement {
     public String name;
     public int id;
@@ -26,6 +29,14 @@ public class Movement {
         this.specialEffect = mvRead.hasSideEffect(move_id);
     }
 
+    public boolean doesItHit(){
+        Random random = new Random();
+        if(this.accuracy == 101) return true;
+        else{
+            int numeroAleatorio = random.nextInt(100) + 1;
+            return numeroAleatorio <= this.accuracy;
+        }
+    }
     public void getSpecialEffect(Pokemon attacker, Movement movement, Pokemon defender) {
         if(movement.specialEffect){
             switch (movement.id) {
