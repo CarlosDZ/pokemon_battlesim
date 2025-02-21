@@ -6,7 +6,7 @@ Acrobatics{ID:1
     PP:24
     EFFECT:Y
     PRIO:0
-    DES:This movement description inst implemented yet
+    DES: Double power if user has no held item
 }
 
 Alluring Voice{ID:2
@@ -29,7 +29,7 @@ Aqua Jet{ID:3
     PP:32
     EFFECT:N
     PRIO:1
-    DES:This movement description inst implemented yet
+    DES:This movement usually goes first
 }
 
 Blizzard{ID:4
@@ -62,7 +62,7 @@ Calm Mind{ID:6
     PP:32
     EFFECT:Y
     PRIO:0
-    DES:This movement description inst implemented yet
+    DES:Raise user's Special Attack and Special Defense by 1 stage
 }
 
 Facade{ID:7
@@ -73,7 +73,7 @@ Facade{ID:7
     PP:32
     EFFECT:Y
     PRIO:0
-    DES:This movement description inst implemented yet
+    DES:Double power if user is burned/poisoned/paralyzed
 }
 
 Flip Turn{ID:8
@@ -95,7 +95,7 @@ Hydro Pump{ID:9
     PP:8
     EFFECT:N
     PRIO:0
-    DES:This movement description inst implemented yet
+    DES:This movement has no additional effect
 }
 
 Ice Beam{ID:10
@@ -128,7 +128,7 @@ Pain Split{ID:12
     PP:32
     EFFECT:Y
     PRIO:0
-    DES:This movement description inst implemented yet
+    DES:This movement shares the HP of user and target equally
 }
 
 Play Rough{ID:13
