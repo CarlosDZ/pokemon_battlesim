@@ -107,6 +107,7 @@ public class PokeBuilder {
         try {
             do { 
                 abilitySelector = sc.nextInt();
+                if(abilitySelector<1 || abilitySelector>numOfHabs) System.out.println("Numero no valido, prueba con otro");
             } while (abilitySelector<1 || abilitySelector>numOfHabs);
             String finalAbility = aviableAbilities[abilitySelector-1];
             return finalAbility;
@@ -186,6 +187,7 @@ public class PokeBuilder {
                 e.printStackTrace();
             }
         }
-        return previouslySelected;
+        int[] movesID = {movePool[previouslySelected[0]-1],movePool[previouslySelected[1]-1],movePool[previouslySelected[2]-1],movePool[previouslySelected[3]-1],};
+        return movesID;
     }
 }
