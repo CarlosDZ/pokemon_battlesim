@@ -12,13 +12,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        PokeReader pkRead = new PokeReader();
-        MoveReader mvRead = new MoveReader();
-        ItemReader itRead = new ItemReader();
-        AbilityReader abRead = new AbilityReader();
-        PokeBuilder pkBuild = new PokeBuilder();
         Scanner sc = new Scanner(System.in);
-        Events event = new Events();
 
 
         
